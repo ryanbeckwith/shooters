@@ -10,8 +10,6 @@ public class Credits extends BasicGameState
   Animation creatorLast, beckwith, beckwithBig;
   Animation menuButton, menuButtonClick, menuButtonClickBig;
   Image createdBy;
-  Image dedicatedTo, person;
-  boolean keysDown;
   int[] duration = {200, 200};
   long startingTime, totalTime;
   
@@ -22,8 +20,6 @@ public class Credits extends BasicGameState
 
   public void init(GameContainer gc, StateBasedGame sbg) throws SlickException
   {
-    keysDown = false;
-    
     Image[] ry = {new Image("res/RyanBlue.png"), new Image("res/RyanBlue.png")};
     Image[] ryBig = {new Image("res/RyanRed.png"), new Image("res/RyanRed.png")};
     Image[] beck = {new Image("res/BeckwithBlue.png"), new Image("res/BeckwithBlue.png")};
@@ -32,8 +28,6 @@ public class Credits extends BasicGameState
     Image[] menuBig = {new Image("res/MenuButtonClickBig.png"), new Image("res/MenuButtonClickBig.png")};
     
     createdBy = new Image("res/CreatedBy.png");
-    dedicatedTo = new Image("res/DedicatedTo.png");
-    person = new Image("res/Person.png");
     
     menuButtonClick = new Animation(menu, duration, false);
     menuButtonClickBig = new Animation(menuBig, duration, false);
@@ -54,13 +48,6 @@ public class Credits extends BasicGameState
     createdBy.draw(700, 50);
     creator.draw(685, 150);
     creatorLast.draw(505, 330);
-    
-    if(keysDown)
-    {
-      dedicatedTo.draw(660, 530);
-      person.draw(505, 610);
-    }
-    
     menuButton.draw(790, 840);
   }
 
@@ -93,15 +80,6 @@ public class Credits extends BasicGameState
     {
       creator = ryan;
       creatorLast = beckwith;
-    }
-    
-    if(input.isKeyDown(Input.KEY_I) && input.isKeyDown(Input.KEY_L) && input.isKeyDown(Input.KEY_Y))
-    {
-      keysDown = true;
-    }
-    else
-    {
-      keysDown = false;
     }
   }
 
