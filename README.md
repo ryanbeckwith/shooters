@@ -1,6 +1,7 @@
 # shooters
 A full-fledged, two dimensional state-based game that involves a player-versus-player simulation of a paintball battle. Utilizes the Slick library and the StateBasedGame class functionality. A personal project.\
 ![Screenshot_68](https://raw.githubusercontent.com/ryanbeckwith/shooters/master/Screenshot_68.png)
+![Screenshot_69](https://raw.githubusercontent.com/ryanbeckwith/shooters/master/Screenshot_69.png)
 ### Controls
 #### Player 1:
 up arrow - Moves the player to the top of the screen.\
