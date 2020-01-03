@@ -3,37 +3,6 @@ import org.newdawn.slick.*;
 import org.newdawn.slick.state.*;
 import org.lwjgl.input.Mouse;
 
-/**
- * Multiple errors need fixing:
- * 1) Program still won't treat each bullet object separately and
- * deletes each object created whenever the next object is created.
- * Look at the drawing function and look into the draw function more
- * to try and understand what is going on. (done)
- * 
- * 2) Program seems to be treating the coordinates of the first two 
- * bullet objects created oddly, as the first two bullets seem to be
- * created at (0,0), even though no mention of (0,0) can be found. The
- * third bullet, oddly enough, seems to be working fine. Try to comb
- * through methods looking for logical errors that could be causing this. (done)
- * 
- * 3) Program doesn't recognize that when period is pressed that it should
- * enter the "gun" mode until the user moves. This causes the program to crash
- * if the user presses period without moving and tries to fire. This is likely
- * because the program doesn't understand the state it is in, and editing the
- * part of code referring to the period key down should fix it. (done)
- * 
- * To-do list:
- * 1)fix all errors (done)
- * 2)get the reload function working, multiple bullets to be shot at once (done)
- * 3)fix the boundary detecting for the bullets (done)
- * 4)create the red player (same as blue just with different area) (done)
- * 5)create bullet collision detection (done)
- * 6)create game end sequence (done)
- * 7)polish game (done)
- * 
- * @author Ryan Beckwith
- *
- */
 public class Play extends BasicGameState
 {
   Animation blueBoi, movingUp, movingDown, movingLeft, movingRight, gunMovingUp, gunMovingDown, gunMovingLeft, gunMovingRight, blueBoi1, blueBoi2, blueBoi3;
@@ -73,7 +42,6 @@ public class Play extends BasicGameState
   long totalTime;
   int direction = 1;
   int direction1, direction2, direction3;
-  // up = 0, down = 1, left = 2, right = 3
   
   
   
@@ -102,7 +70,6 @@ public class Play extends BasicGameState
   float redBullet1PositionY, redBullet2PositionY, redBullet3PositionY;
   int directionRed;
   int directionRed1, directionRed2, directionRed3;
-  // up = 0, down = 1, left = 2, right = 3
   
   public Play(int state)
   {
