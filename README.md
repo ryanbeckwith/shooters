@@ -18,5 +18,6 @@ space - Shoots a paintball in the direction the player is facing.
 ### Running this program
 NOTE: All files in the folder "src2" must be placed into the src folder before this program is run, otherwise certain images will not be displayed properly.\
 A functional version of the JRE System Library (JavaSE 1.8 or higher) must be installed for the program to properly compile. This program was written using the Eclipse IDE, and is tailored to best suit the way that Eclipse compiles and executes Java programs. Use of other IDEs may result in unexpected disfunctionality.\
-Additionally, all folders included in this project must be included in the same sublevel and must maintain their given names in order for this program to function properly.
+Additionally, all folders included in this project must be included in the same sublevel and must maintain their given names in order for this program to function properly.\
+Note that window dimensions are hardcoded for this game, and may not display properly on machines with screen dimensions below 1080p.
 
